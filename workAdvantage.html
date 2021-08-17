@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <style>
+   .card {
+    margin: 20px 0px;
+    border-radius: 20px;
+   }
+    .header img {
+        width: 100%;
+        height: 150px;
+    }
+    .body span.title {
+        font-size: 24px;
+    font-weight: bold;
+    }
+    .body span.glyphicon-star {
+        color: #de8f19;
+    }
+    .body span.rating-container {
+    margin-top: 10px;
+    }
+    .footer span.glyphicon-heart-empty {
+        font-size: 22px;
+    margin-top: 7px;
+    color: pink;
+    }
+    </style>
+    <title>Work Advantage</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="container">
+       <div class="row" id="root">
+        
+       </div>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <script id="initialData">
+        var initialData = [{
+            resName: 'Briyani Blues',
+            resImg: 'https://b.zmtcdn.com/data/pictures/chains/8/301718/637e40a80eb50255c18af330e9a76749_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'B 202, 203, Supermart 1, DLF Phase 4, Gurgaon',
+            resType: 'Biryani, Hyderabadi, Fast Food, Kebab',
+            costtwo: 'Rs 600',
+            timing: '10am – 5am (Mon-Sun)'
+
+        }, {
+            resName: 'Kaiser',
+            resImg: 'https://b.zmtcdn.com/data/pictures/2/18361762/401bc141a5765709f4f0f605020594c3_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'Supermart 2, DLF Phase 4',
+            resType: 'North Indian, Mughlai, Biryani, Rolls',
+            costtwo: 'Rs. 700',
+            timing: '11:30am – 11:30pm (Mon-Sun)'
+
+        }, {
+            resName: 'Behrouz Biryani',
+            resImg: 'https://b.zmtcdn.com/data/pictures/chains/2/18363082/0b157d9edcbc932632582f9b91fa6936_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'Vasant kunj',
+            resType: 'Biryani, North Indian, Mughlai',
+            costtwo: 'Rs. 700',
+            timing: '10am – 1am (Mon-Sun)'
+
+
+        }, {
+            resName: 'Biryani By Kilo',
+            resImg: 'https://b.zmtcdn.com/data/pictures/chains/8/301718/637e40a80eb50255c18af330e9a76749_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'Shop H 16/6, Ground Floor, DLF Phase 1, Gurgaon',
+            resType: 'Biryani, Mughlai, Kebab, Hyderabadi',
+            costtwo: 'Rs. 700',
+            timing: '10am – 11pm (Mon-Thu),10am – 12midnight (Fri-Sun)'
+
+        }, {
+            resName: 'Briyani Blues',
+            resImg: 'https://b.zmtcdn.com/data/pictures/chains/3/307893/b14dca1c929ac4db0c3c532ed99d959b_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'B 202, 203, Supermart 1, DLF Phase 4, Gurgaon',
+            resType: 'Biryani, Mughlai, Kebab, Hyderabadi',
+            costtwo: 'Rs. 700',
+            timing: '10am – 11pm (Mon-Thu),10am – 12midnight (Fri-Sun)'
+
+        }, {
+            resName: 'Bikkgane Biryani',
+            resImg: 'https://b.zmtcdn.com/data/pictures/5/300595/45396b33bfdb56d7bb17c052530acba6_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'P-2/90, Opposite PVR Rivoli, Connaught Place, New Delhi',
+            resType: 'Biryani, Mughlai, Kebab, Hyderabadi',
+            costtwo: 'Rs. 700',
+            timing: '10am – 11pm (Mon-Thu),10am – 12midnight (Fri-Sun)'
+
+
+        }, {
+            resName: 'Anand Restaurant',
+            resImg: 'https://b.zmtcdn.com/data/pictures/chains/0/306340/95e6008a79e4536db87f4e9e4d5d104c_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'B 202, 203, Supermart 1, DLF Phase 4, Gurgaon',
+            resType: 'Biryani, Mughlai, Kebab, Hyderabadi',
+            costtwo: 'Rs. 700',
+            timing: '10am – 11pm (Mon-Thu),10am – 12midnight (Fri-Sun)'
+
+        }, {
+            resName: 'Beeryani',
+            resImg: 'https://b.zmtcdn.com/data/pictures/chains/1/311311/d2ecfb9cedad3f3d57796bfe23d79c38_featured_v2.jpg',
+            resRating: 3,
+            resStructure: '<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>',
+            resAddress: 'B 202, 203, Supermart 1, DLF Phase 4, Gurgaon',
+            resType: 'Biryani, Mughlai, Kebab, Hyderabadi',
+            costtwo: 'Rs. 700',
+            timing: '10am – 11pm (Mon-Thu),10am – 12midnight (Fri-Sun)'
+
+        }];
+        var innerHtml = '';
+        for (var i= 0; i < initialData.length; i++) {
+           innerHtml += '<div class="card col-md-3"><div class="header"><img src="'+initialData[i].resImg+'"/></div><div class="body"><span class="title">'+initialData[i].resName+'</span><span class="rating-container pull-right"><span>'+initialData[i].resStructure+'</span><span>'+initialData[i].resRating+'</span></span><p>'+initialData[i].resType+'</p><p>'+initialData[i].timing+'</p><p>'+initialData[i].costtwo+'</p></div><div class="footer"><span class="glyphicon glyphicon-heart-empty"></span><a class="btn btn-default pull-right" href="'+initialData[i].resImg+'" target="_blank">BUY NOW</a></div></div>' 
+        }
+        document.getElementById('root').innerHTML = innerHtml;
+    </script>
+  </body>
+</html>
